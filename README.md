@@ -90,6 +90,20 @@ SOC clamped between 0% and 100%.
 
 ---
 
+## Excel Integration
+
+MATLAB exports 1,440 rows of per-minute data automatically:
+
+```matlab
+writetable(T, 'Solar_Monitoring_24hr.xlsx', 'Sheet', 'Raw Data');
+```
+
+The Excel workbook contains two sheets:
+- **Raw Data:** 1,440 rows × 5 columns (Hour, Solar_W, Load_W, Net_W, SOC_pct)
+- **Daily Report:** KPI summary table + 24-hour power chart + SOC flags
+
+---
+
 ## Tools Used
 
 | Tool | Purpose |
